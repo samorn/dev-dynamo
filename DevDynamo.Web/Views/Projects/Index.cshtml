@@ -1,0 +1,19 @@
+﻿
+@model IEnumerable<Project>
+<h3>Projects</h3>
+
+<form  asp-action="Create" method="post">
+    <button class="btn btn-success" >Create a new Project</button>
+
+</form>
+<ul>
+@foreach(var proj in Model)
+{
+    <li>
+        <a asp-action="Details" asp-route-id="@proj.Id">
+                @proj.Name
+        </a>
+    </li>
+
+}
+</ul>

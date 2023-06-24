@@ -1,0 +1,19 @@
+﻿### EF
+compare and find diff (code vs database).
+Generates C# migration scripts.
+Run this code this project that host the DbContext
+...
+> dotnet ef migrations add <name>
+> dotnet ef migrations remove //undo previous migration
+...
+### EF
+sameple :
+...
+> dotnet ef migrations add Initail
+...
+### Update database
+sameple :
+...
+> dotnet ef database update
+...
+
