@@ -47,6 +47,10 @@ namespace DevDynamo.Web
             app.UseAuthorization();
 
             app.MapControllerRoute(
+               name: "ApiV1",
+               pattern: "{controller=Home}/{action=Index}/{id?}",new { Area ="ApiV1"});
+
+            app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
