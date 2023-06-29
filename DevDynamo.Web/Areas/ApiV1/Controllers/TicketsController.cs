@@ -16,6 +16,8 @@ namespace DevDynamo.Web.Areas.ApiV1.Controllers
         [HttpPut]
         public ActionResult<TicketsResponse> ChangeTicketStatus(ChangeTicketStatusResponse Reques)
         {
+            
+            if (Reques.Status =="") throw new InvalidOperationException("Status not found.");
 
             var T = new Ticket(Reques.Id,Reques.Status);
                 
