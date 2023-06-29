@@ -4,11 +4,18 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DevDynamo.Model
 {
     public class Ticket
     {
+        public Ticket(int id,  string Status)
+        {
+            Id = Id;
+            Status = Status;
+        }
+
         public Ticket() { }
         public int Id { get; set; }
         [StringLength(100)]
